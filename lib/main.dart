@@ -16,7 +16,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DicePage(),
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: const Text('Dice-kocka'),
+          backgroundColor: Colors.red,
+        ),
+        body: const DicePage(),
+      ),
     );
   }
 }
@@ -26,6 +33,15 @@ class DicePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Row(
+      children: [
+        Expanded(
+          child: Image.asset('images/dice1.png'),
+        ),
+        Expanded(
+          child: Image.asset('images/dice1.png'),
+        ),
+      ],
+    );
   }
 }
